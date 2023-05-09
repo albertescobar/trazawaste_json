@@ -36,18 +36,41 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 // Envía la solicitud al servicio web
 $result = curl_exec($ch);
 
-// Verifica si hubo algún error en la solicitud CURL
+
+// Verifica si hubo algún error en la solicitud CURL y listar todo el json
 if(curl_errno($ch)) {
     echo 'Error al conectarse al servicio web SDR Fulls de Seguiment: ' . curl_error($ch);
 } else {
     // Imprime la respuesta del servicio web
-    echo $result . "\n";
+    echo "todos los valores del json" . "<br>";
+    echo "<br>" . $result . "<br>";
 }
 
 
 
+// Decodifica el objeto JSON en un array asociativo para meter en variables los parámetros deseados
+$response = json_decode($result, true);
+
+// Accede a cada valor usando la clave correspondiente
+$numFull = $response['BeanRestFullReturnDades']['numFull'];
+$tipusFull = $response['BeanRestFullReturnDades']['tipusFull'];
+$estat = $response['BeanRestFullReturnDades']['estat'];
+$codiProductor = $response['BeanRestFullReturnDades']['codiProductor'];
+$codiNotificant = $response['BeanRestFullReturnDades']['codiNotificant'];
+$nomNotificant = $response['BeanRestFullReturnDades']['nomNotificant'];
+// y así sucesivamente para cada valor que quieras obtener
+
+// Puedes imprimir los valores para verificar si se han obtenido correctamente
+echo "<br>" . "algunos valores del json en varible" . "<br>";
+echo "<br>" . "numFull: " . $numFull . "<br>";
+echo "tipusFull: " . $tipusFull . "<br>";
+echo "estat: " . $estat . "<br>";
+echo "codiProductor: " . $codiProductor . "<br>";
+echo "codiNotificant: " . $codiNotificant . "<br>";
+echo "nomNotificant: " . $nomNotificant . "<br>";
+// y así sucesivamente para cada valor que quieras imprimir
+
 // Cierra la conexión CURL
 curl_close($ch);
-
 
 ?>
