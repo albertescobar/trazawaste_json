@@ -1,5 +1,7 @@
 <?php
 
+//!!!!!!*******OJO NO SE PEUDE OBTENER LISTADO DE FS/DI********!!!!!!!!
+
 // Configura los componentes de la URL
 $host = "sdr.arc.cat";
 $basePath = "/fitxes3/rest";
