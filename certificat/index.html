@@ -91,6 +91,24 @@
       }
     </style>
 
+      <style type="text/css" media="print">
+
+        /*comando para que no se imprima la barra de navegación, boton imprimir...*/
+        @media print {
+        .nav {display:none;}
+        .imprimir {display:none;}
+        }
+
+        /*instrucción para que no se imprima el encabeza y pie de pagina que sale por defecto*/
+        @page
+            {
+                size:  auto;   /* auto is the initial value */
+                margin: 5mm;  /* this affects the margin in the printer settings */
+            }
+
+      </style>
+
+
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
@@ -112,42 +130,6 @@
       </symbol>
     </svg>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-
-
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
@@ -162,10 +144,21 @@
 
   <main class="px-3">
     <h1>Certficado</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
-    </p>
+
+  <p class="lead">XXXXXXX, amb NIF XXXXXX i seu social al XXXXXXX, XXXXX Terrassa (Barcelona), i representada per ZZZZZZZZ en qualitat d’administrador, informa:</p>
+
+  <p class="lead">Que a la planta XXXXXXX situada al XXXXXXXX, XXXXX Terrassa (Barcelona) a rebut XX Tn el dia XX/XX/XXXXX de “terres no especials” amb CER 170504 mitjançant tractament R05, procedents de XXXXXX sita en XXXXXXXX, XXXXX (Abrera) Barcelona.</p>
+
+  <p class="lead">I perquè consti es signa el present certificat a Terrassa (Data signatura).</p>
+
+  <p class="lead">Atentament,</p>
+<div class="firma">
+<img src="../img/firma.png" alt="firma_gestor" width="100px">
+</div>
+  <p class="lead"> XXXXXXX</p>
+<div class="imprimir">
+<input type="button" value="Imprimir" class="printbutton">
+</div>
   </main>
 
   <footer class="mt-auto text-white-50">
@@ -173,7 +166,13 @@
   </footer>
 </div>
 
-
+<script>
+        document.querySelectorAll('.printbutton').forEach(function(element) {
+            element.addEventListener('click', function() {
+                print();
+            });
+        });
+    </script>
 
   </body>
 </html>
