@@ -22,7 +22,7 @@ $datos = array(
       4 -> Acceptat
       7 -> Cancel·lat */
 
-    "tipusFull"=> "DI"//per DI canviar a DI
+    "tipusFull"=> "DI"//Per filtrar DI o FS
 );
 
 
