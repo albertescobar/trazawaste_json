@@ -20,7 +20,7 @@
       $estado = '<img src="img/pendiente.png" alt="pendiente" width="25px">';
     }
   else {
-    $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px">';
+    $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
   }
 
   $estado_bbdd_gestion = "reexpedido"; //cambiar valor por resutlado BBDD
@@ -35,8 +35,23 @@
     }
   if ($estado_bbdd_gestion == "reexpedido")
     {
-      $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px">';
+      $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
     }
+
+    $estado_bbdd_gestion_2 = "aceptado"; //cambiar valor por resutlado BBDD
+
+    if ($estado_bbdd_gestion_2 == "pendiente")
+      {
+        $estado3 = '<img src="img/pendiente.png" alt="pendiente" width="25px">';
+      }
+    if ($estado_bbdd_gestion_2 == "aceptado")
+      {
+        $estado3 = '<img src="img/aceptado.png" alt="aceptado" width="25px">';
+      }
+    if ($estado_bbdd_gestion_2 == "reexpedido")
+      {
+        $estado3 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px">';
+      }
   ?>
 
 
@@ -174,11 +189,17 @@
 
   <p class="lead">XXXXXXX, amb NIF XXXXXX i seu social al XXXXXXX, XXXXX Terrassa (Barcelona), i representada per ZZZZZZZZ en qualitat d’administrador, informa:</p>
 
-  <p class="lead">Que a la planta XXXXXXX situada al XXXXXXXX, XXXXX Terrassa (Barcelona) a rebut XX Tn el dia XX/XX/XXXXX de “terres no especials” amb CER 170504 mitjançant tractament R05, procedents de XXXXXX sita en XXXXXXXX, XXXXX (Abrera) Barcelona.</p>
+  <p class="lead">Que a la planta XXXXXXX situada al XXXXXXXX, XXXXX Terrassa (Barcelona) a rebut XX Tn el dia XX/XX/XXXXX de “terres no especials” amb CER 170504 mitjançant tractament R12, procedents de XXXXXX sita en XXXXXXXX, XXXXX (Abrera) Barcelona.</p>
 
   <p class="lead">Residuo recepcionado en la instalación: <?php echo $estado;?></p>
 
-  <p class="lead">Residuo gestionado y/o reexpedido: <?php echo $estado2;?></p>
+  <p class="lead">Residuo gestionado y/o reexpedido R12: <?php echo $estado2;?></p>
+
+  <p class="lead">Residuo gestionado y/o reexpedido R05: <?php echo $estado3;?></p>
+
+
+    Que a la planta XXXXXXX situada al XXXXXXXX, XXXXX Terrassa (Barcelona) a rebut XX Tn el dia XX/XX/XXXXX de “terres no especials” amb CER 170504 mitjançant tractament R05, procedents de XXXXXX sita en XXXXXXXX, XXXXX (Abrera) Barcelona.
+
 
   <p class="lead">I perquè consti es signa el present certificat a Terrassa (Data signatura).</p>
 

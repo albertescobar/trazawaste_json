@@ -77,7 +77,7 @@ if (isset($response['resultats']) && is_array($response['resultats'])) {
         if (isset($item['numFull'])) {
             $numFull = $item['numFull'];
             $dataTransport = $item['dataTransport'];
-            echo "FS num: " . $numFull . " " . "Data transport: " . $dataTransport . "<br>";
+            echo "FS num: " . $numFull . " " . "Data transport: " . $dataTransport . " =>Trazar" . "<br>" ;
         } else {
             echo "No se encontró el valor de numFull en un elemento del JSON<br>";
         }
