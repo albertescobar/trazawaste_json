@@ -11,48 +11,48 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
 
-<?php
+    <?php
 
-  $estado_bbdd_recepcion = "aceptado"; //cambiar valor por resutlado BBDD
+      $estado_bbdd_recepcion = "aceptado"; //cambiar valor por resutlado BBDD
 
-  if ($estado_bbdd_recepcion == "pendiente")
-    {
-      $estado = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
-    }
-  else {
-    $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
-  }
-
-  $estado_bbdd_gestion = "reexpedido"; //cambiar valor por resutlado BBDD
-
-  if ($estado_bbdd_gestion == "pendiente")
-    {
-      $estado2 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
-    }
-  if ($estado_bbdd_gestion == "aceptado")
-    {
-      $estado2 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
-    }
-  if ($estado_bbdd_gestion == "reexpedido")
-    {
-      $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
-    }
-
-    $estado_bbdd_gestion_2 = "aceptado"; //cambiar valor por resutlado BBDD
-
-    if ($estado_bbdd_gestion_2 == "pendiente")
-      {
-        $estado3 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+      if ($estado_bbdd_recepcion == "pendiente")
+        {
+          $estado = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+        }
+      else {
+        $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
       }
-    if ($estado_bbdd_gestion_2 == "aceptado")
-      {
-        $estado3 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
-      }
-    if ($estado_bbdd_gestion_2 == "reexpedido")
-      {
-        $estado3 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
-      }
-  ?>
+
+      $estado_bbdd_gestion = "reexpedido"; //cambiar valor por resutlado BBDD
+
+      if ($estado_bbdd_gestion == "pendiente")
+        {
+          $estado2 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+        }
+      if ($estado_bbdd_gestion == "aceptado")
+        {
+          $estado2 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
+        }
+      if ($estado_bbdd_gestion == "reexpedido")
+        {
+          $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
+        }
+
+        $estado_bbdd_gestion_2 = "aceptado"; //cambiar valor por resutlado BBDD
+
+        if ($estado_bbdd_gestion_2 == "pendiente")
+          {
+            $estado3 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+          }
+        if ($estado_bbdd_gestion_2 == "aceptado")
+          {
+            $estado3 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
+          }
+        if ($estado_bbdd_gestion_2 == "reexpedido")
+          {
+            $estado3 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
+          }
+      ?>
 
 
 
@@ -185,7 +185,7 @@
   </header>
 
   <main class="px-3">
-    <h1>Certificado</h1>
+    <h1 class="tit_certificat">Certificado</h1>
 
   <p class="lead">SARPI IBERICA SLU, amb CIF B60171162 i seu social al CAMI CAN BROS 6, 08760 Martorell (Barcelona),
      i representada per Fernando Perez en qualitat d’administrador, informa:</p>
@@ -195,6 +195,12 @@
     procedents de Industria Rocra sita en C/Industrial, 6, 08777 Sabadell (Barcelona).</p>
 
   <p class="lead">Residuo recepcionado en la instalación: <?php echo $estado;?></p>
+
+  <p class="lead">Residuo gestionado y/o reexpedido R12: <?php echo $estado2;?></p>
+
+  <p class="lead curs" >Que a la planta SARPI IBERICA SLU situada al C/ LA PIEDAD, S/N, 17777 Vilareal (Castellón)
+     a rebut 12,5 Tn el dia 04/06/2023 de “terres especials” amb CER 170503 mitjançant tractament R05, procedents de SARPI IBERICA SLU
+    sita en AMI CAN BROS 6, 08760 Martorell (Barcelona).</p>
 
   <p class="lead">Residuo gestionado y/o reexpedido R05: <?php echo $estado3;?></p>
 
