@@ -200,7 +200,7 @@
 
   <p class="lead curs" >Que a la planta SARPI IBERICA SLU situada al C/ LA PIEDAD, S/N, 17777 Vilareal (Castellón)
      a rebut 12,5 Tn el dia 04/06/2023 de “terres especials” amb CER 170503 mitjançant tractament R05, procedents de SARPI IBERICA SLU
-    sita en AMI CAN BROS 6, 08760 Martorell (Barcelona).</p>
+    sita en CAMI CAN BROS 6, 08760 Martorell (Barcelona).</p>
 
   <p class="lead">Residuo gestionado y/o reexpedido R05: <?php echo $estado3;?></p>
 

@@ -191,7 +191,7 @@
      i representada per Fernando Perez en qualitat d’administrador, informa:</p>
 
   <p class="lead">Que a la planta SARPI IBERICA SLU situada al CAMI CAN BROS 6, 08760 Martorell (Barcelona) ha
-    rebut 12,50 Tn el dia 01/06/2023 de “terres especials” amb CER 170503 mitjançant tractament R12,
+    rebut 12,50 Tn el dia 01/06/2023 de “terres especials” amb CER 170503 mitjançant tractament D09,
     procedents de Industria Rocra sita en C/Industrial, 6, 08777 Sabadell (Barcelona).</p>
 
   <p class="lead">Residuo recepcionado en la instalación: <?php echo $estado;?></p>
