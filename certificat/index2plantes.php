@@ -17,44 +17,42 @@
 
       if ($estado_bbdd_recepcion == "pendiente")
         {
-          $estado = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+          $estado = '<img src="img/pendiente.png" alt="pendiente" width="25px"> <b>Pendiente</b>';
         }
       else {
-        $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
+        $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px"> <b>Aceptado</b>';
       }
 
       $estado_bbdd_gestion = "reexpedido"; //cambiar valor por resutlado BBDD
 
       if ($estado_bbdd_gestion == "pendiente")
         {
-          $estado2 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+          $estado2 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> <b>Pendiente</b>';
         }
       if ($estado_bbdd_gestion == "aceptado")
         {
-          $estado2 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
+          $estado2 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> <b>Aceptado</b>';
         }
       if ($estado_bbdd_gestion == "reexpedido")
         {
-          $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
+          $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> <b>Reexpedido</b>';
         }
 
         $estado_bbdd_gestion_2 = "aceptado"; //cambiar valor por resutlado BBDD
 
         if ($estado_bbdd_gestion_2 == "pendiente")
           {
-            $estado3 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> Pendiente';
+            $estado3 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> <b>Pendiente</b>';
           }
         if ($estado_bbdd_gestion_2 == "aceptado")
           {
-            $estado3 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> Aceptado';
+            $estado3 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> <b>Aceptado</b>';
           }
         if ($estado_bbdd_gestion_2 == "reexpedido")
           {
-            $estado3 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> Reexpedido';
+            $estado3 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> <b>Reexpedido</b>';
           }
       ?>
-
-
 
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -187,31 +185,31 @@
   <main class="px-3">
     <h1 class="tit_certificat">Certificado</h1>
 
-  <p class="lead">SARPI IBERICA SLU, amb CIF B60171162 i seu social al CAMI CAN BROS 6, 08760 Martorell (Barcelona),
-     i representada per Fernando Perez en qualitat d’administrador, informa:</p>
+  <p class="lead"><b>SARPI IBERICA SLU</b>, amb CIF <b>B60171162</b> i seu social al <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b>,
+     i representada per <b>Fernando Perez </b>en qualitat d’administrador, informa:</p>
 
-  <p class="lead">Que a la planta SARPI IBERICA SLU situada al CAMI CAN BROS 6, 08760 Martorell (Barcelona) ha
-    rebut 12,50 Tn el dia 01/06/2023 de “terres especials” amb CER 170503 mitjançant tractament R12,
-    procedents de Industria Rocra sita en C/Industrial, 6, 08777 Sabadell (Barcelona).</p>
+  <p class="lead">Que a la planta <b>SARPI IBERICA SLU</b> situada al <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b> ha
+    rebut <b>12,50 Tn</b> el dia <b>01/06/2023</b> de <b>terres especials</b> amb CER <b>170503</b> i ha tractat mitjançant <b>R12</b>,
+    procedents de <b>Industria Rocra</b> sita en <b>C/Industrial, 6, 08777 Sabadell (Barcelona)</b>.</p>
 
   <p class="lead">Residuo recepcionado en la instalación: <?php echo $estado;?></p>
 
   <p class="lead">Residuo gestionado y/o reexpedido R12: <?php echo $estado2;?></p>
 
-  <p class="lead curs" >Que a la planta SARPI IBERICA SLU situada al C/ LA PIEDAD, S/N, 17777 Vilareal (Castellón)
-     a rebut 12,5 Tn el dia 04/06/2023 de “terres especials” amb CER 170503 mitjançant tractament R05, procedents de SARPI IBERICA SLU
-    sita en CAMI CAN BROS 6, 08760 Martorell (Barcelona).</p>
+  <p class="lead curs" >Que a la planta <b>SARPI IBERICA SLU</b> situada al <b>C/ LA PIEDAD, S/N, 17777 Vilareal (Castellón)</b>
+     a rebut <b>12,5 Tn</b> el dia <b>04/06/2023</b> de <b>terres especials</b> amb CER <b>170503</b> mitjançant tractament <b>R05</b>, procedents de <b>SARPI IBERICA SLU</b>
+    sita en <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b>.</p>
 
   <p class="lead">Residuo gestionado y/o reexpedido R05: <?php echo $estado3;?></p>
 
-  <p class="lead">I perquè consti es signa el present certificat a Martorell (04/06/2023).</p>
+  <p class="lead">I perquè consti es signa el present certificat a <b>Martorell (04/06/2023)</b>.</p>
 
   <p class="lead">Atentament,</p>
 
 <div class="firma">
 <img src="../img/firma.png" alt="firma_gestor" width="100px">
 </div>
-  <p class="lead"> Fernando Pérez</p>
+  <p class="lead"> <b>Fernando Pérez</b></p>
 <div class="imprimir">
 <input type="button" value="Imprimir" class="printbutton">
 </div>

@@ -11,6 +11,51 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
 
+<?php
+
+  $estado_bbdd_recepcion = "aceptado"; //cambiar valor por resutlado BBDD
+
+  if ($estado_bbdd_recepcion == "pendiente")
+    {
+      $estado = '<img src="img/pendiente.png" alt="pendiente" width="25px"> <b>Pendiente</b>';
+    }
+  else {
+    $estado = '<img src="img/aceptado.png" alt="aceptado" width="25px"> <b>Aceptado</b>';
+  }
+
+  $estado_bbdd_gestion = "reexpedido"; //cambiar valor por resutlado BBDD
+
+  if ($estado_bbdd_gestion == "pendiente")
+    {
+      $estado2 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> <b>Pendiente</b>';
+    }
+  if ($estado_bbdd_gestion == "aceptado")
+    {
+      $estado2 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> <b>Aceptado</b>';
+    }
+  if ($estado_bbdd_gestion == "reexpedido")
+    {
+      $estado2 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> <b>Reexpedido</b>';
+    }
+
+    $estado_bbdd_gestion_2 = "aceptado"; //cambiar valor por resutlado BBDD
+
+    if ($estado_bbdd_gestion_2 == "pendiente")
+      {
+        $estado3 = '<img src="img/pendiente.png" alt="pendiente" width="25px"> <b>Pendiente</b>';
+      }
+    if ($estado_bbdd_gestion_2 == "aceptado")
+      {
+        $estado3 = '<img src="img/aceptado.png" alt="aceptado" width="25px"> <b>Aceptado</b>';
+      }
+    if ($estado_bbdd_gestion_2 == "reexpedido")
+      {
+        $estado3 = '<img src="img/reenviado.jpeg" alt="reexpedido" width="30px"> <b>Reexpedido</b>';
+      }
+  ?>
+
+
+
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -86,18 +131,26 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
-
-      .fcc-btn {
-        background-color: #199319;
-        color: white;
-        padding: 15px 5px;
-      }
-
-      .planta2 {
-        margin-top: 40px;
-      }
-
     </style>
+
+      <style type="text/css" media="print">
+
+        /*comando para que no se imprima la barra de navegación, boton imprimir...*/
+        @media print {
+        .nav {display:none;}
+        .imprimir {display:none;}
+        }
+
+        /*instrucción para que no se imprima el encabeza y pie de pagina que sale por defecto*/
+        @page
+            {
+                size:  auto;   /* auto is the initial value */
+                margin: 2mm;  /* this affects the margin in the printer settings */
+            }
+
+      </style>
+
+
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
@@ -120,7 +173,7 @@
     </svg>
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header>
+  <header class="mb-auto">
     <div>
       <img class="float-md-start mb-0" src="../img/logo.png" alt="logo" width="200px">
       <nav class="nav nav-masthead justify-content-center float-md-end">
@@ -130,12 +183,31 @@
       </nav>
     </div>
   </header>
+
   <main class="px-3">
-    <div>
-  <a class="fcc-btn" href="index1planta.php">Certificado destino final</a>
+    <h1>Certificado</h1>
+
+  <p class="lead"><b>SARPI IBERICA SLU</b>, amb CIF <b>B60171162</b> i seu social al <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b>,
+     i representada per <b>Fernando Perez </b>en qualitat d’administrador, informa:</p>
+
+  <p class="lead">Que a la planta <b>SARPI IBERICA SLU</b> situada al <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b> ha
+    rebut <b>12,50 Tn</b> el dia <b>01/06/2023</b> de <b>terres especials</b> amb CER <b>170503</b> i ha tractat mitjançant <b>D09</b>,
+    procedents de <b>Industria Rocra</b> sita en <b>C/Industrial, 6, 08777 Sabadell (Barcelona)</b>.</p>
+
+  <p class="lead">Residuo recepcionado en la instalación: <?php echo $estado;?></p>
+
+  <p class="lead">Residuo gestionado y/o reexpedido <b>D09</b>: <?php echo $estado3;?></p>
+
+  <p class="lead">I perquè consti es signa el present certificat a <b>Martorell (04/06/2023)</b>.</p>
+
+  <p class="lead">Atentament,</p>
+
+<div class="firma">
+<img src="../img/firma.png" alt="firma_gestor" width="100px">
 </div>
-<div class="planta2">
-  <a class="fcc-btn" href="index2plantes.php">Certificado planta intermedia</a>
+  <p class="lead"> <b>Fernando Pérez</b></p>
+<div class="imprimir">
+<input type="button" value="Imprimir" class="printbutton">
 </div>
   </main>
 
@@ -143,6 +215,14 @@
     <p>© 2023 <a href="https://www.trazawaste.com/" class="text-white"> Trazawaste, SL</a></p>
   </footer>
 </div>
+
+<script>
+        document.querySelectorAll('.printbutton').forEach(function(element) {
+            element.addEventListener('click', function() {
+                print();
+            });
+        });
+    </script>
 
   </body>
 </html>
