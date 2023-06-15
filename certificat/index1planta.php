@@ -187,10 +187,10 @@
   <main class="px-3">
     <h1>Certificado</h1>
 
-  <p class="lead"><b>SARPI IBERICA SLU</b>, amb CIF <b>B60171162</b> i seu social al <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b>,
+  <p class="lead"><b>EMPRESA, SL</b>, amb CIF <b>B0000000</b> i seu social al <b>Calle 3, 08000 Barcelona</b>,
      i representada per <b>Fernando Perez </b>en qualitat d’administrador, informa:</p>
 
-  <p class="lead">Que a la planta <b>SARPI IBERICA SLU</b> situada al <b>CAMI CAN BROS 6, 08760 Martorell (Barcelona)</b> ha
+  <p class="lead">Que a la planta <b>EMPRESA, SL</b> situada al <b>Calle 3, 08000 Barcelona</b> ha
     rebut <b>12,50 Tn</b> el dia <b>01/06/2023</b> de <b>terres especials</b> amb CER <b>170503</b> i ha tractat mitjançant <b>D09</b>,
     procedents de <b>Industria Rocra</b> sita en <b>C/Industrial, 6, 08777 Sabadell (Barcelona)</b>.</p>
 
@@ -198,7 +198,7 @@
 
   <p class="lead">Residuo gestionado y/o reexpedido <b>D09</b>: <?php echo $estado3;?></p>
 
-  <p class="lead">I perquè consti es signa el present certificat a <b>Martorell (04/06/2023)</b>.</p>
+  <p class="lead">I perquè consti es signa el present certificat a <b>Barcelona (04/06/2023)</b>.</p>
 
   <p class="lead">Atentament,</p>
 
