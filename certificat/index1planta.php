@@ -185,7 +185,7 @@
   </header>
 
   <main class="px-3">
-    <h1>Certificado</h1>
+    <h1>Certificat</h1>
 
   <p class="lead"><b>EMPRESA, SL</b>, amb CIF <b>B0000000</b> i seu social al <b>Calle 3, 08000 Barcelona</b>,
      i representada per <b>Fernando Perez </b>en qualitat d’administrador, informa:</p>
@@ -205,7 +205,7 @@
 <div class="firma">
 <img src="../img/firma.png" alt="firma_gestor" width="100px">
 </div>
-  <p class="lead"> <b>Fernando Pérez</b></p>
+  <p class="lead"> <b>Senyor/a</b></p>
 <div class="imprimir">
 <input type="button" value="Imprimir" class="printbutton">
 </div>
